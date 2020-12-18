@@ -16,17 +16,37 @@ public class Video {
     private String url;
     private int views;
     private int likes;
+    private int length;
+    private Date date;
     private String category;
 
     public Video() {
     }
 
-    public Video(String name, String url, int views, int likes, int videoLength, Date date, String category) {
+    public Video(String name, String url, int views, int likes, int length, Date date, String category) {
         this.name = name;
         this.url = url;
         this.views = views;
         this.likes = likes;
+        this.length = length;
+        this.date = date;
         this.category = category;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int videoSeconds) {
+        this.length = videoSeconds;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public Long getId() {
