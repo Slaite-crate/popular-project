@@ -33,22 +33,6 @@ public class Video {
         this.category = category;
     }
 
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int videoSeconds) {
-        this.length = videoSeconds;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     public Long getId() {
         return id;
     }
@@ -89,7 +73,21 @@ public class Video {
         this.likes = likes;
     }
 
+    public int getLength() {
+        return length;
+    }
 
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     public String getCategory() {
         return category;
@@ -107,6 +105,8 @@ public class Video {
                 ", url='" + url + '\'' +
                 ", views=" + views +
                 ", likes=" + likes +
+                ", length=" + length +
+                ", date=" + date +
                 ", category='" + category + '\'' +
                 '}';
     }
