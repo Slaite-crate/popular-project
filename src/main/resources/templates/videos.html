@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../styles/tables.css">
 </head>
 <body>
 
     <table>
+        <tr>
+            <th>name</th>
+            <th>url</th>
+            <th>views</th>
+            <th>likes</th>
+            <th>length</th>
+            <th>date</th>
+            <th>category</th>
+        </tr>
         <tr th:each="video : ${videos}">
             <td th:text="${video.name}"></td>
+            <td th:text="${video.url}"></td>
+            <td th:text="${video.views}"></td>
             <td th:text="${video.likes}"></td>
+            <td th:text="${video.length}"></td>
             <td th:text="${video.date}"></td>
             <td th:text="${video.category}"></td>
         </tr>
