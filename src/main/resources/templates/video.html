@@ -9,13 +9,13 @@
 
     <table>
         <tr>
-            <th>name</th>
-            <th>url</th>
-            <th>views</th>
-            <th>likes</th>
-            <th>length</th>
-            <th>date</th>
-            <th>category</th>
+            <th><a href="http://localhost:8080/video/name">name</a></th>
+            <th><a href="http://localhost:8080/video/url">url</a></th>
+            <th><a href="http://localhost:8080/video/views">views</a></th>
+            <th><a href="http://localhost:8080/video/likes">likes</a></th>
+            <th><a href="http://localhost:8080/video/length">length</a></th>
+            <th><a href="http://localhost:8080/video/date">date</a></th>
+            <th><a href="http://localhost:8080/video/category">category</a></th>
         </tr>
         <tr th:each="video : ${videos}">
             <td th:text="${video.name}"></td>
