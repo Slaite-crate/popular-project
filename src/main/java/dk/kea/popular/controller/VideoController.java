@@ -25,7 +25,7 @@ public class VideoController {
     }
 
     @GetMapping("/video/{by}")
-    public String readAllBy(@PathVariable String by, Model model){
+    public String orderAllBy(@PathVariable String by, Model model){
         switch (by){
             case "name":
                 model.addAttribute("videos", videoRepository.findAllByOrderByName());
@@ -49,6 +49,12 @@ public class VideoController {
                 model.addAttribute("videos", videoRepository.findAllByOrderByCategory());
                 break;
         }
+        return "video";
+    }
+
+    @GetMapping("/video/musik")
+    public String ReadAllBy(Model model){
+        model.addAttribute("videos", videoRepository.findAllByCategoryContains("Musik"));
         return "video";
     }
 }

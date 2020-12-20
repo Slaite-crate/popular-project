@@ -11,4 +11,5 @@ public interface VideoRepository extends CrudRepository<Video, Long> {
     public Iterable<Video> findAllByOrderByLengthDesc();
     public Iterable<Video> findAllByOrderByDateDesc();
     public Iterable<Video> findAllByOrderByCategory();
+    public Iterable<Video> findAllByCategoryContains(String categroy);
 }
